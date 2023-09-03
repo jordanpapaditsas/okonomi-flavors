@@ -1,7 +1,7 @@
 # Okonomi-Universe
 
 ## Description
-( Currently under Development )
+A Japanese restaurant homepage. ( Currently under Development )
 
 ## Live Preview
 
