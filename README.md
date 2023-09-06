@@ -4,6 +4,7 @@
 A Japanese restaurant homepage. ( Currently under Development )
 
 ## Live Preview
+( Coming Soon )
 
 ## Getting Started
 Follow these steps to get the website up and running on your local machine:
