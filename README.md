@@ -6,6 +6,8 @@ A Japanese restaurant homepage made with JavaScript. ( Currently under Developme
 ## Live Preview
 ( Coming Soon )
 
+## Screenshots Preview
+
 ## Getting Started
 Follow these steps to get the website up and running on your local machine:
 
