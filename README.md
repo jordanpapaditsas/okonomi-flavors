@@ -1,7 +1,7 @@
 # Okonomi-Universe
 
 ## Description
-A Japanese restaurant homepage. ( Currently under Development )
+A Japanese restaurant homepage made with JavaScript. ( Currently under Development )
 
 ## Live Preview
 ( Coming Soon )
