@@ -1,4 +1,4 @@
-# Okonomi-Universe
+# Okonomi-Flavors
 
 ## Description
 A Japanese restaurant homepage made with JavaScript. ( Currently under Development )
@@ -11,7 +11,7 @@ A Japanese restaurant homepage made with JavaScript. ( Currently under Developme
 ## Getting Started
 Follow these steps to get the website up and running on your local machine:
 
-1. Clone this repository: `git clone https://github.com/your-username/okonomi-universe.git`
+1. Clone this repository: `git clone https://github.com/your-username/okonomi-flavors.git`
 2. Open the `index.html` file in your preferred web browser.
 3. Explore the mechanism of the application.
 4. Customize the content to fit your application's needs.
