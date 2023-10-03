@@ -1,3 +1,4 @@
-// Here I will import all functions and initialize the webpage.
+import loadPage from './page-structure';
 
+loadPage();
 
