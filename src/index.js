@@ -1,4 +1,4 @@
-import loadPage from './page-structure';
+import { loadPage } from './page-structure';
 
 loadPage();
 
