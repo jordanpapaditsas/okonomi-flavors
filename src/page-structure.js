@@ -20,21 +20,21 @@ function createNav() {
   const nav = document.createElement('nav');
   nav.id = 'nav';
 
-  const homeNav = document.createElement('a');
-  homeNav.id = 'home-nav';
-  homeNav.textContent = 'HOME';
+  const homeNavBtn = document.createElement('button');
+  homeNavBtn.id = 'home-btn';
+  homeNavBtn.textContent = 'HOME';
 
-  const menuNav = document.createElement('a');
-  menuNav.id = 'menu-nav';
-  menuNav.textContent = 'MENU';
+  const menuNavBtn = document.createElement('button');
+  menuNavBtn.id = 'menu-btn';
+  menuNavBtn.textContent = 'MENU';
 
-  const contactNav = document.createElement('a');
-  contactNav.id = 'contact-nav';
-  contactNav.textContent = 'CONTACT US';
+  const contactNavBtn = document.createElement('button');
+  contactNavBtn.id = 'contact-btn';
+  contactNavBtn.textContent = 'CONTACT US';
 
-  nav.appendChild(homeNav);
-  nav.appendChild(menuNav);
-  nav.appendChild(contactNav);
+  nav.appendChild(homeNavBtn);
+  nav.appendChild(menuNavBtn);
+  nav.appendChild(contactNavBtn);
 
   return nav;
 }
@@ -45,7 +45,8 @@ function createMain() {
 
   const restaurantName = document.createElement('h1');
   restaurantName.id = 'restaurant-name';
-  restaurantName.textContent = 'Welcome to Okonomi Flavors';
+  restaurantName.innerHTML = `Welcome to Okonomi Flavors<br>
+                              <span id="restaurant-type">Japanese Restaurant</span>`;
 
   main.append(restaurantName);
 
@@ -73,6 +74,23 @@ function createFooter() {
   return footer;
 }
 
+function browseNavTabs() {
+  const buttons = document.querySelectorAll('button');
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', (event) => {
+      if (event.target.id === 'home-btn') {
+        //  Handle Home
+        console.log('Home button clicked');  // Test home btn
+      } else if (event.target.id === 'menu-btn') {
+        // Handle Menu
+      } else if (event.target.id === 'contact-btn') {
+        // Handle Contact
+      }
+    });
+  });
+}
+
 export function loadPage() {
   const content = document.querySelector('#content');
 
@@ -80,6 +98,7 @@ export function loadPage() {
   content.appendChild(createMain());
   content.appendChild(createFooter());
   loadHomePage();
+  browseNavTabs();
 
   return content;
 }

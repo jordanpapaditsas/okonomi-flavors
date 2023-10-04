@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+#restaurant-type {
+  font-size: 1.1rem;
+  font-weight: normal;
+  
+}
+
 body {
   min-height: 100vh;
   background-image: url(../assets/daniele-salutari-restaurant-home.png);
@@ -32,10 +38,14 @@ header {
   height: 11.2rem;
 }
 
-nav a {
+#home-btn,
+#menu-btn,
+#contact-btn {
   color: white;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-right: 5rem;
+  background-color: black;
+  border: none;
 }
 
 #restaurant-name {

@@ -18,8 +18,7 @@
   perfected the delicate balance of savory and sweet, crispy and tender, 
   that defines the essence of okonomiyaki. Every dish we create is 
   a labor of love, passed down through the years, preserving the authenticity 
-  and time-honored techniques that have made us a beloved culinary destination.
-  `
+  and time-honored techniques that have made us a beloved culinary destination.`;
 
   homePageDiv.append(homeParagraph);
   main.append(homePageDiv);
@@ -28,6 +27,7 @@
 }
 
 export function loadHomePage() {
+const main = document.querySelector('#main');
 
-  main.appendChild(createHomePage());
+main.appendChild(createHomePage());
 }
