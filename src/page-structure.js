@@ -1,5 +1,7 @@
 //  Here I will have all the 'create layout' functions of my webpage.
 import { loadHomePage } from "./home";
+import { loadContactPage } from "./contact";
+import { loadMenuPage } from "./menu";
 
 function createHeader() {
   const header = document.createElement('header');
@@ -42,14 +44,6 @@ function createNav() {
 function createMain() {
   const main = document.createElement('main');
   main.id = 'main';
-
-  const restaurantName = document.createElement('h1');
-  restaurantName.id = 'restaurant-name';
-  restaurantName.innerHTML = `Welcome to Okonomi Flavors<br>
-                              <span id="restaurant-type">Japanese Restaurant</span>`;
-
-  main.append(restaurantName);
-
   // main.textContent = '';  Clean main for tabbing new option
 
   return main;
@@ -62,14 +56,22 @@ function createFooter() {
   const copyright = document.createElement('span');
   copyright.textContent = 'Copyright ©';
 
-  const gitHubName = document.createElement('p');
-  gitHubName.textContent = 'Jordan Papaditsas';
+  const authorName = document.createElement('p');
+  authorName.textContent = 'Jordan Papaditsas';
 
   const currentDate = new Date().getFullYear();
 
+  const gitHubLink = document.createElement('a');
+  gitHubLink.href = 'https://github.com/jordanpapaditsas';
+
+  const gitHubIcon = document.createElement('i');
+  gitHubIcon.classList.add('fa-brands', 'fa-github');
+
   footer.append(copyright);
-  footer.append(gitHubName);
+  footer.append(authorName);
   footer.append(currentDate);
+  gitHubLink.appendChild(gitHubIcon);
+  footer.append(gitHubLink);
 
   return footer;
 }
@@ -80,15 +82,39 @@ function browseNavTabs() {
   buttons.forEach((button) => {
     button.addEventListener('click', (event) => {
       if (event.target.id === 'home-btn') {
-        //  Handle Home
-        console.log('Home button clicked');  // Test home btn
+        cleanMain();
+        loadHomePage();
       } else if (event.target.id === 'menu-btn') {
-        // Handle Menu
+        cleanMain();
+        changeColorInGithubIcon();
+        loadMenuPage();
       } else if (event.target.id === 'contact-btn') {
-        // Handle Contact
+        cleanMain();
+        changeColorInGithubIcon();
+        loadContactPage();
       }
     });
   });
+}
+
+function removeBackGroundImg() {
+// Need to make a function for removing or toggling the background Image
+}
+
+function changeColorInGithubIcon() {
+  const gitHubIcon = document.querySelector('.fa-github');
+
+  gitHubIcon.style.color = 'black';
+
+  return gitHubIcon;
+}
+
+function cleanMain() {
+  const main = document.querySelector('#main');
+
+  main.textContent = '';
+
+  return main;
 }
 
 export function loadPage() {
@@ -103,3 +129,9 @@ export function loadPage() {
   return content;
 }
 
+
+// Tasks: 
+// Figure out how to toggle background image with JS
+// Make the menu page with prices
+// Make the contact form  
+// Complete the CSS styling

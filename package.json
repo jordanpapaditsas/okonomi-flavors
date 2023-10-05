@@ -1,4 +1,7 @@
 {
+  "//": [
+    "webpack --watch is for recompiling the code without manually run build"
+  ],
   "name": "okonomi-flavors",
   "version": "1.0.0",
   "description": "A Japanese restaurant homepage made with JavaScript. ( Currently under Development )",
@@ -7,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gh-pages --dist 'dist' --branch 'release'",
     "build": "webpack",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch"   
   },
   "author": "",
   "license": "ISC",

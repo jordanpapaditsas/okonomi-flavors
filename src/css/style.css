@@ -4,16 +4,10 @@
   box-sizing: border-box;
 }
 
-#restaurant-type {
-  font-size: 1.1rem;
-  font-weight: normal;
-  
-}
-
 body {
   min-height: 100vh;
   background-image: url(../assets/daniele-salutari-restaurant-home.png);
-  background-size: 100%;
+  background-size: 150rem;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -29,13 +23,31 @@ body {
   width: 300px;
 }
 
+#menu-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+}
+
+.menu-img {
+  width: 300px;
+  border-radius: 0.7rem;
+}
+
+#restaurant-type {
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.9);
   width: 100%;
-  height: 11.2rem;
+  height: 10rem;
 }
 
 #home-btn,
@@ -55,8 +67,10 @@ header {
 
 #home-page-div {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  gap: 3rem;
+  color: white;
 }
 
 #home-paragraph {
@@ -67,6 +81,13 @@ header {
   margin-top: 3rem;
 }
 
+#work-schedule-div {
+  border: 2px solid white;
+  width: 30%;
+  height: 150px;
+  text-align: center;
+}
+
 footer {
   color: white;
   display: flex;
@@ -74,4 +95,8 @@ footer {
   align-items: center;
   gap: 0.5rem;
   margin-top: auto;
+}
+
+i {
+  color: white;
 }
