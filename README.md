@@ -1,7 +1,7 @@
 # Okonomi-Flavors
 
 ## Description
-A Japanese restaurant homepage developed with JavaScript and supported with Webpack module bundler.  
+A Japanese restaurant webpage developed with JavaScript and supported with Webpack module bundler.  
 ( Currently under Development )
 
 ## Live Preview
