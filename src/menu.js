@@ -1,5 +1,3 @@
-// Here I will develop all menu options functions.
-
 function createMenuPage() {
   const menuDiv = document.createElement('div');
   menuDiv.id = 'menu-div';
@@ -24,10 +22,8 @@ function createMenuPage() {
   product3.src = '../src/assets/kuremo-menu-3.png';
   product3.alt = 'PRODUCT 3';
 
-
-
   menuDiv.append(product1, product2, product3);
-
+  
   return menuDiv;
 }
 

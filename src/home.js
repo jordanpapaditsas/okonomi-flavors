@@ -1,5 +1,3 @@
-// Here I will create the functions of  'home page'.
-
  function createHomePage() {
   const homePageDiv = document.createElement('div');
   homePageDiv.id = 'home-page-div';
@@ -7,7 +5,7 @@
   const restaurantName = document.createElement('h1');
   restaurantName.id = 'restaurant-name';
   restaurantName.innerHTML = `Welcome to Okonomi Flavors<br>
-                              <span id="restaurant-type">Japanese Restaurant</span>`;
+                              <span id="restaurant-type">Traditional Japanese Restaurant</span>`;
 
   const homeParagraph = document.createElement('p');
   homeParagraph.id = 'home-paragraph';
@@ -54,7 +52,7 @@
   workScheduleDiv.append(hoursTitle, hoursMonday, hoursTuesday, hoursWednesday,  
                          hoursThursday, hoursFriday, hoursSaturday);
   homePageDiv.append(restaurantName, homeParagraph, workScheduleDiv);
-  main.append(homePageDiv);
+  // main.append(homePageDiv);
   
   return homePageDiv;
 }
