@@ -10,6 +10,9 @@ A Japanese restaurant webpage developed with JavaScript and supported with Webpa
 ## Screenshots Preview
 ( Currently under Development )
 
+## Planning
+- Add a post request call for contact form.
+
 ## Contributing
 All contributions are accepted! If you'd like to contribute, please follow these steps:
 
