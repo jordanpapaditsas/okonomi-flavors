@@ -1,6 +1,6 @@
 import { loadHomePage } from "./home";
-import { loadContactPage } from "./contact";
 import { loadMenuPage } from "./menu";
+import { loadContactPage } from "./contact";
 import homeBackgroundPic from './assets/daniele-salutari-restaurant-home.png';
 import contactBackgroundPic from './assets/contact-us.png';
 

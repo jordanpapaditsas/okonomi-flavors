@@ -3,8 +3,6 @@ import { loadPage } from './page-structure';
 loadPage();
 
 
-
 // Tasks: 
-// Make the menu page with prices ---> add a 4th plate in menu 
-// Make the contact form  
+// Figure out how to not let submit the form more than once in every session
 // Complete the CSS styling

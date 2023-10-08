@@ -138,8 +138,8 @@ body {
 }
 
 #contact-form-container {
-  text-align: center;
   color: var(--text-color-white);
+  margin-top: 5rem;
 }
 
 #contact-form {
@@ -147,9 +147,62 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 1rem;
+  font-size: 3rem;
 }
 
+#contact-form input, textarea {
+  width: 30rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  text-indent: 2rem;
+  border-radius: 1rem;
+}
+
+#contact-form textarea {
+  height: 10rem;
+  resize: none;
+  letter-spacing: 1px;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+  outline: none;
+  border: 5px solid rgb(131, 10, 10);
+  box-shadow: 2px 5px 5px 0px #3d0303;
+  border-radius: 1rem;
+}
+
+#submit-btn-container {
+  text-align: center;
+}
+
+#submit-btn {
+  font-size: 2rem;
+  width: 15rem;
+  height: 5rem;
+  border-radius: 2rem;
+  background-color: #8d0d0d;
+  color: var(--text-color-white);
+  border: none;
+  margin-top: 2rem;
+}
+
+#confirmation-message {
+  color: var(--text-color-white);
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  animation: fadeIn 0.8s;
+}
+
+#error-name,
+#error-email,
+#error-textarea {
+  font-size: 2rem;
+  color: red;
+}
+ 
 #footer {
   border: 1px solid var(--color-black);
   background-color: var(--color-black);
@@ -170,6 +223,10 @@ body {
 i {
   color: var(--text-color-white);
 }
+
+
+
+/* Hover Effects */
 
 @keyframes fadeIn {
   0% {

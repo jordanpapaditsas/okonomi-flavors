@@ -6,52 +6,185 @@ function createContactPage() {
   contactUsTitle.id = 'contact-us-title';
   contactUsTitle.textContent = 'Contact Us';
 
-  contactPageContainer.append(contactUsTitle ,createForm());
+  const submitBtnContainer = document.createElement('div');
+  submitBtnContainer.id = 'submit-btn-container';
+
+  const submitBtn = document.createElement('button');
+  submitBtn.id = 'submit-btn';
+  submitBtn.value = 'insert';
+  submitBtn.textContent = 'Submit';
+
+  submitBtn.addEventListener('click', submitForm);
+
+  submitBtnContainer.append(submitBtn);
+  contactPageContainer.append(contactUsTitle ,createForm(), submitBtnContainer);
 
   return contactPageContainer;
 }
 
-function createForm(name, email, message) {
+function createForm() {
   const contactFormContainer = document.createElement('div');
   contactFormContainer.id = 'contact-form-container';
 
   const contactForm = document.createElement('form');
   contactForm.id = 'contact-form';
-  contactForm.method = 'post';
+  contactForm.method = 'POST';
 
   const nameDiv = document.createElement('div');
   nameDiv.id = 'name-div';
-  const nameLabel = document.createElement('label');
-  nameLabel.id = 'name-label';
-  nameLabel.for = `${name}`;
-  nameLabel.textContent = 'Name: ';
   const nameInput = document.createElement('input');
   nameInput.id = 'name-input';
   nameInput.type = 'text';
-  nameInput.name = `${name}`;
-
+  nameInput.name = 'name';
+  nameInput.autocomplete = 'on';
+  nameInput.placeholder = 'Name';
+  
   const emailDiv = document.createElement('div');
   emailDiv.id = 'email-div';
-  const emailLabel = document.createElement('label');
-  emailLabel.id = 'email-label';
-  emailLabel.for = `${email}`;
-  emailLabel.textContent = 'Email: ';
   const emailInput = document.createElement('input');
   emailInput.id = 'email-input';
   emailInput.type = 'email';
-  emailInput.name = `${email}`;
+  emailInput.name = 'email';
+  emailInput.autocomplete = 'on';
+  emailInput.placeholder = 'Email';
+  
+  const messageBoxDiv = document.createElement('div');
+  messageBoxDiv.id = 'message-box-div';
+  const messageBox = document.createElement('textarea');
+  messageBox.id = 'message-textarea';
+  messageBox.name = 'message-text';
+  messageBox.placeholder = 'Message';
+  
+  nameDiv.append(nameInput);
+  emailDiv.append(emailInput);
+  messageBoxDiv.append(messageBox);
 
-  nameDiv.append(nameLabel, nameInput);
-  emailDiv.append(emailLabel, emailInput);
-  contactForm.append(nameDiv, emailDiv);
+  contactForm.append(nameDiv, emailDiv, messageBoxDiv, errorMessages.errorValidationForName, 
+                      errorMessages.errorValidationForEmail, errorMessages.errorValidationForTextArea);
   contactFormContainer.append(contactForm);
 
   return contactFormContainer;
 }
 
-export function loadContactPage() {
-const main = document.querySelector('#main');
+function submitForm() {
+  const name = document.querySelector('#name-input').value;
+  const email = document.querySelector('#email-input').value;
+  const message = document.querySelector('#message-textarea').value;
+  const main = document.querySelector('#main');
 
-main.append(createContactPage());
+  if (!validateForm()) {
+    return;
+  }
+
+  // Create an object with the data taken from the form
+  const formData = {
+    name: name,
+    email: email,
+    message: message,
+  };
+
+  // Convert the formData object into a JSON string
+  const formDataJSON = JSON.stringify(formData);
+
+  // Store the JSON data in localStorage
+  localStorage.setItem('formData', formDataJSON);
+
+  document.querySelector('#name-input').value = '';
+  document.querySelector('#email-input').value = '';
+  document.querySelector('#message-textarea').value = '';
+
+  displayLocalStorageData();  // Update the displayed data from local storage
+
+  main.append(confirmMessages.confirmationMessage);
+}
+
+function validateForm() {
+  const nameInput = document.querySelector('#name-input').value;
+  const emailInput = document.querySelector('#email-input').value;
+  const messageTextArea = document.querySelector('#message-textarea').value;
+  const confirmationMessage = document.querySelector('#confirmation-message');
+  let isFormInputValid = true;
+
+  if (!nameInput || nameInput.length < 2) {
+    errorMessages.errorValidationForName.innerHTML = 'Name is too short, please give a valid name!';
+    isFormInputValid = false;
+  } else if (!/^[a-zA-z]+$/.test(nameInput) ) {
+    errorMessages.errorValidationForName.innerHTML = 'Please give a valid name!';
+  } else {
+    // Clear the error message if the input is valid
+    errorMessages.errorValidationForName.innerHTML = '';
+  }
+
+  if (!/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(emailInput)) {
+    errorMessages.errorValidationForEmail.innerHTML = 'Please give a valid email!';
+    isFormInputValid = false;
+  } else {
+    errorMessages.errorValidationForEmail.innerHTML = '';
+  }
+
+  if (!messageTextArea|| messageTextArea.length <= 6) {
+    errorMessages.errorValidationForTextArea.innerHTML = 'Message too short!';
+    isFormInputValid = false;
+  } else {
+    errorMessages.errorValidationForTextArea.innerHTML = '';
+  }
+
+  if (confirmationMessage) {
+    confirmMessages.confirmationMessage.innerHTML = 'You are already submitted the form!';
+  } else {
+    confirmMessages.confirmationMessage.innerHTML = `Form submitted successfully! <br>
+    We will contact you as soon as possible.`;
+  }
+
+  return isFormInputValid;
+}
+
+// IIFE (Immediately Invoked Function Expression) for encapsulation purpose
+const errorMessages = (() => {
+  const errorValidationForName = document.createElement('span');
+  errorValidationForName.id = 'error-name';
+
+  const errorValidationForEmail = document.createElement('span');
+  errorValidationForEmail.id = 'error-email';
+
+  const errorValidationForTextArea = document.createElement('span');
+  errorValidationForTextArea.id = 'error-textarea';
+
+  return {
+    errorValidationForName,
+    errorValidationForEmail,
+    errorValidationForTextArea,
+  };
+})();
+
+const confirmMessages = (() => {
+  // Shows a confirmation message upon a successful submission of the form
+  const confirmationMessage = document.createElement('div');
+  confirmationMessage.id = 'confirmation-message';
+
+  return {
+    confirmationMessage
+  }
+})();
+
+function displayLocalStorageData() {
+  // Retrieving the data from local storage
+  const localStorageData = localStorage.getItem('formData');
+
+  if (localStorageData) {
+    // Parsing JSON string into a JS object
+    const parsedData = JSON.parse(localStorageData);
+
+    // logs the stored data from the form
+    console.log('Stored Form Data: ', parsedData);
+  } else {
+    console.log('There isn\'t any data stored in the local storage.');
+  }
+}
+
+export function loadContactPage() {
+  const main = document.querySelector('#main');
+
+  main.append(createContactPage());
 }
 
