@@ -10,7 +10,7 @@ function createHeader() {
 
   const logo = document.createElement('img');
   logo.id = 'logo';
-  logo.src = 'src/assets/okonomi-logo.png';
+  logo.src = '../src/assets/okonomi-logo.png';
   logo.alt = 'LOGO';
 
   header.append(logo);
