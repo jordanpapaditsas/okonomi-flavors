@@ -28,7 +28,7 @@
   
   const hoursTitle = document.createElement('h2');
   hoursTitle.id = 'hours-h2';
-  hoursTitle.textContent = 'Hours Open';
+  hoursTitle.textContent = 'Working Hours';
 
   const hoursMonday = document.createElement('p');
   hoursMonday.classList.add('hours');
@@ -52,7 +52,6 @@
   workScheduleDiv.append(hoursTitle, hoursMonday, hoursTuesday, hoursWednesday,  
                          hoursThursday, hoursFriday, hoursSaturday);
   homePageDiv.append(restaurantName, homeParagraph, workScheduleDiv);
-  // main.append(homePageDiv);
   
   return homePageDiv;
 }

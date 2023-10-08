@@ -1,30 +1,73 @@
 function createMenuPage() {
-  const menuDiv = document.createElement('div');
-  menuDiv.id = 'menu-div';
+  const menuContainer = document.createElement('div');
+  menuContainer.id = 'menu-div';
 
-  const product1 = document.createElement('img');
-  product1.id = 'product-1';
-  product1.classList.add('menu-img');
-  product1.src = '../src/assets/guillaume-coue-menu-1.png';
-  product1.alt = 'PRODUCT 1';
-  const product1Info = document.createElement('p');
+  menuContainer.append(
+    createProduct(
+      'Samurai Bacon',
+      'first-product',
+      'Testing Description Lorem Ipsum',
+      '5.70$'
+    )
+  );
 
+  menuContainer.append(
+    createProduct(
+      'Fuji sensation',
+      'second-product',
+      'Testing Description Lorem Ipsum',
+      '7.50$'
+    )
+  );
 
-  const product2 = document.createElement('img');
-  product2.id = 'product-2';
-  product2.classList.add('menu-img');
-  product2.src = '../src/assets/romeo-a-menu-2.png';
-  product2.alt = 'PRODUCT 2';
+  menuContainer.append(
+    createProduct(
+      'Ninja way',
+      'third-product',
+      'Testing Description Lorem Ipsum',
+      '6.90$'
+    )
+  );
 
-  const product3 = document.createElement('img');
-  product3.id = 'product-3';
-  product3.classList.add('menu-img');
-  product3.src = '../src/assets/kuremo-menu-3.png';
-  product3.alt = 'PRODUCT 3';
+  menuContainer.append(
+    createProduct(
+      'Shrimp eruption',
+      'fourth-product',
+      'Testing Description Lorem Ipsum',
+      '9.60$'
+    )
+  );
 
-  menuDiv.append(product1, product2, product3);
-  
-  return menuDiv;
+  return menuContainer;
+}
+
+function createProduct(productTitle, pictureName, description, price) {
+  const productCard = document.createElement('div');
+  productCard.id = 'product-card';
+
+  const productImage = document.createElement('img');
+  productImage.id = 'product-img';
+  productImage.src = `../src/assets/${pictureName.toLowerCase()}.png`;
+  productImage.alt = `${pictureName}`;
+
+  const productName = document.createElement('h2');
+  productName.id = 'product-title';
+  productName.textContent = productTitle;
+
+  const productDescription = document.createElement('p');
+  productDescription.id = 'product-description';
+  productDescription.textContent = description;
+
+  const productPrice = document.createElement('p');
+  productPrice.id = 'product-price';
+  productPrice.textContent = price;
+
+  productCard.append(productImage);
+  productCard.append(productName);
+  productCard.append(productDescription);
+  productCard.append(productPrice);
+
+  return productCard;
 }
 
 export function loadMenuPage() {

@@ -2,7 +2,7 @@ import { loadHomePage } from "./home";
 import { loadContactPage } from "./contact";
 import { loadMenuPage } from "./menu";
 import homeBackgroundPic from './assets/daniele-salutari-restaurant-home.png';
-import contactBackgroundPic from './assets/daniel-hooper-about-us.png';
+import contactBackgroundPic from './assets/contact-us.png';
 
 function createHeader() {
   const header = document.createElement('header');
@@ -35,9 +35,9 @@ function createNav() {
   contactNavBtn.id = 'contact-btn';
   contactNavBtn.textContent = 'CONTACT US';
 
-  nav.appendChild(homeNavBtn);
-  nav.appendChild(menuNavBtn);
-  nav.appendChild(contactNavBtn);
+  nav.append(homeNavBtn);
+  nav.append(menuNavBtn);
+  nav.append(contactNavBtn);
 
   return nav;
 }
@@ -71,7 +71,6 @@ function createFooter() {
   gitHubIcon.classList.add('fa-brands', 'fa-github');
 
   footerDiv.append(copyright, authorName, currentDate, gitHubLink);
-  
   gitHubLink.append(gitHubIcon);
   footer.append(footerDiv);
 
@@ -89,17 +88,14 @@ function browseNavTabs() {
       if (event.target.id === 'home-btn') {
         cleanMain();
         document.body.style.backgroundImage = `url(${homeBackgroundImage})`;
-        changeFooterTextColorWhite();
         loadHomePage();
       } else if (event.target.id === 'menu-btn') {
         cleanMain();
         document.body.style.backgroundImage = 'none';
-        changeFooterTextColorBlack();
         loadMenuPage();
       } else if (event.target.id === 'contact-btn') {
         cleanMain();
         document.body.style.backgroundImage = `url(${contactBackgroundImage})`;
-        changeFooterTextColorBlack();
         loadContactPage();
       }
     });
@@ -113,26 +109,12 @@ function cleanMain() {
   return main;
 }
 
-function changeFooterTextColorBlack() {
-  const footerDiv = document.querySelector('#footer-div');
-  footerDiv.style.cssText = 'color: black;';
-  const gitHubIcon = document.querySelector('.fa-brands');
-  gitHubIcon.style.color = 'black';
-}
-
-function changeFooterTextColorWhite() {
-  const footerDiv = document.querySelector('#footer-div');
-  footerDiv.style.cssText = 'color: white;';
-  const gitHubIcon = document.querySelector('.fa-brands');
-  gitHubIcon.style.color = 'white';
-}
-
 export function loadPage() {
   const content = document.querySelector('#content');
 
-  content.appendChild(createHeader());
-  content.appendChild(createMain());
-  content.appendChild(createFooter());
+  content.append(createHeader());
+  content.append(createMain());
+  content.append(createFooter());
   loadHomePage();
   browseNavTabs();
 
