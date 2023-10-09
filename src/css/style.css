@@ -25,7 +25,7 @@ body {
 }
 
 #logo {
-  width: 340px;
+  width: 16rem;
 }
 
 #header {
@@ -34,7 +34,7 @@ body {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.9);
   width: 100%;
-  height: 8rem;
+  height: 7rem;
 }
 
 #home-btn,
@@ -42,7 +42,7 @@ body {
 #contact-btn {
   color: var(--text-color-white);
   background-color: var(--color-black);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin-right: 5rem;
   border: none;
 }
@@ -50,11 +50,11 @@ body {
 #restaurant-name {
   color: var(--text-color-white);
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.2rem;
 }
 
 #restaurant-type {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: normal;
 }
 
@@ -71,7 +71,7 @@ body {
   color: var(--text-color-white);
   text-align: center;
   max-width: 40%;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-top: 3rem;
 }
 
@@ -81,7 +81,7 @@ body {
   height: 12rem;
   text-align: center;
   margin-top: 5rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 #hours-h2 {
@@ -109,7 +109,7 @@ body {
 
 #product-img {
   border-radius: 35%;
-  width: 180px;
+  width: 10rem;
 }
 
 #product-card {
@@ -119,11 +119,11 @@ body {
 }
 
 #product-description {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 #product-price {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 #contact-page-container {
@@ -134,7 +134,7 @@ body {
   color: var(--text-color-white);
   text-align: center;
   margin-bottom: 1rem;
-  font-size: 6rem;
+  font-size: 3rem;
 }
 
 #contact-form-container {
@@ -149,13 +149,12 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   gap: 1rem;
-  font-size: 3rem;
 }
 
 #contact-form input, textarea {
-  width: 30rem;
+  width: 25rem;
   height: 4rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-indent: 2rem;
   border-radius: 1rem;
 }
@@ -178,9 +177,9 @@ body {
 }
 
 #submit-btn {
-  font-size: 2rem;
-  width: 15rem;
-  height: 5rem;
+  font-size: 1.2rem;
+  width: 12rem;
+  height: 4rem;
   border-radius: 2rem;
   background-color: #8d0d0d;
   color: var(--text-color-white);
@@ -192,14 +191,14 @@ body {
   color: var(--text-color-white);
   text-align: center;
   margin-top: 2rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   animation: fadeIn 0.8s;
 }
 
 #error-name,
 #error-email,
 #error-textarea {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: red;
 }
  
@@ -223,8 +222,6 @@ body {
 i {
   color: var(--text-color-white);
 }
-
-
 
 /* Hover Effects */
 
