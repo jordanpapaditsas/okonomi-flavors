@@ -1,4 +1,5 @@
 function createContactPage() {
+  // Create a container for appending all the contact-page elements on it
   const contactPageContainer = document.createElement('div');
   contactPageContainer.id = 'contact-page-container';
 
@@ -72,6 +73,7 @@ function submitForm() {
   const message = document.querySelector('#message-textarea').value;
   const main = document.querySelector('#main');
 
+  // Making the validation before submitting the form, and stops if something is wrong
   if (!validateForm()) {
     return;
   }
@@ -135,7 +137,7 @@ function validateForm() {
     confirmMessages.confirmationMessage.innerHTML = `Form submitted successfully! <br>
     We will contact you as soon as possible.`;
   }
-
+  
   return isFormInputValid;
 }
 

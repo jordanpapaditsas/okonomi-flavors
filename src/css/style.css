@@ -152,8 +152,8 @@ body {
 }
 
 #contact-form input, textarea {
-  width: 25rem;
-  height: 4rem;
+  width: 18rem;
+  height: 3rem;
   font-size: 1rem;
   text-indent: 2rem;
   border-radius: 1rem;
@@ -178,8 +178,8 @@ body {
 
 #submit-btn {
   font-size: 1.2rem;
-  width: 12rem;
-  height: 4rem;
+  width: 10rem;
+  height: 3rem;
   border-radius: 2rem;
   background-color: #8d0d0d;
   color: var(--text-color-white);

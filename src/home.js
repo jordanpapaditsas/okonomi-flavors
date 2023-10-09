@@ -30,6 +30,7 @@
   hoursTitle.id = 'hours-h2';
   hoursTitle.textContent = 'Working Hours';
 
+  // Time Schedule for restaurant
   const hoursMonday = document.createElement('p');
   hoursMonday.classList.add('hours');
   hoursMonday.textContent = 'Monday: 10:00 - 21:00';

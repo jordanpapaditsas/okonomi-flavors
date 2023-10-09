@@ -78,7 +78,9 @@ function createFooter() {
   return footer;
 }
 
-
+/**
+ *  Function for switching between navbar tabs
+ */
 function browseNavTabs() {
   const buttons = document.querySelectorAll('button');
   const homeBackgroundImage = homeBackgroundPic;

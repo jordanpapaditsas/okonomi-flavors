@@ -4,6 +4,7 @@ import thirdProductImage from './assets/third-product.png';
 import fourthProductImage from './assets/fourth-product.png';
 
 function createMenuPage() {
+  // Create a container to append all the products for the menu
   const menuContainer = document.createElement('div');
   menuContainer.id = 'menu-div';
 
