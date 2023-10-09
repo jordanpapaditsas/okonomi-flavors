@@ -5,7 +5,7 @@ A Japanese restaurant webpage developed with JavaScript and supported with Webpa
 ( Currently under Development )
 
 ## Live Preview
-( Currently under Development )
+**https://jordanpapaditsas.github.io/okonomi-flavors/** ( Currently under Development )
 
 ## Screenshots Preview
 ( Currently under Development )
