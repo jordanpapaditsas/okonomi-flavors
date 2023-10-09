@@ -1,3 +1,8 @@
+import firstProductImage from '../src/assets/first-product.png';
+import secondProductImage from '../src/assets/second-product.png';
+import thirdProductImage from '../src/assets/third-product.png';
+import fourthProductImage from '../src/assets/fourth-product.png';
+
 function createMenuPage() {
   const menuContainer = document.createElement('div');
   menuContainer.id = 'menu-div';
@@ -5,7 +10,7 @@ function createMenuPage() {
   menuContainer.append(
     createProduct(
       'Samurai Bacon',
-      'first-product',
+      firstProductImage,
       'Testing Description Lorem Ipsum',
       '5.70$'
     )
@@ -14,7 +19,7 @@ function createMenuPage() {
   menuContainer.append(
     createProduct(
       'Fuji sensation',
-      'second-product',
+      secondProductImage,
       'Testing Description Lorem Ipsum',
       '7.50$'
     )
@@ -23,7 +28,7 @@ function createMenuPage() {
   menuContainer.append(
     createProduct(
       'Ninja way',
-      'third-product',
+      thirdProductImage,
       'Testing Description Lorem Ipsum',
       '6.90$'
     )
@@ -32,7 +37,7 @@ function createMenuPage() {
   menuContainer.append(
     createProduct(
       'Shrimp eruption',
-      'fourth-product',
+      fourthProductImage,
       'Testing Description Lorem Ipsum',
       '9.60$'
     )
@@ -41,14 +46,14 @@ function createMenuPage() {
   return menuContainer;
 }
 
-function createProduct(productTitle, pictureName, description, price) {
+function createProduct(productTitle, productImagePath, description, price) {
   const productCard = document.createElement('div');
   productCard.id = 'product-card';
 
   const productImage = document.createElement('img');
   productImage.id = 'product-img';
-  productImage.src = `/src/assets/${pictureName.toLowerCase()}.png`;
-  productImage.alt = `${pictureName}`;
+  productImage.src = productImagePath;
+  productImage.alt = productTitle;
 
   const productName = document.createElement('h2');
   productName.id = 'product-title';
