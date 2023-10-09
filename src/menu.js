@@ -47,7 +47,7 @@ function createProduct(productTitle, pictureName, description, price) {
 
   const productImage = document.createElement('img');
   productImage.id = 'product-img';
-  productImage.src = `src/assets/${pictureName.toLowerCase()}.png`;
+  productImage.src = `./src/assets/${pictureName.toLowerCase()}.png`;
   productImage.alt = `${pictureName}`;
 
   const productName = document.createElement('h2');
