@@ -16,7 +16,7 @@ body {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  font-size: 10rem;
+  font-size: 200px;
 }
 
 #content {
