@@ -1,7 +1,7 @@
-import firstProductImage from '../src/assets/first-product.png';
-import secondProductImage from '../src/assets/second-product.png';
-import thirdProductImage from '../src/assets/third-product.png';
-import fourthProductImage from '../src/assets/fourth-product.png';
+import firstProductImage from './assets/first-product.png';
+import secondProductImage from './assets/second-product.png';
+import thirdProductImage from './assets/third-product.png';
+import fourthProductImage from './assets/fourth-product.png';
 
 function createMenuPage() {
   const menuContainer = document.createElement('div');
