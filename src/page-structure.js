@@ -3,6 +3,7 @@ import { loadMenuPage } from "./menu";
 import { loadContactPage } from "./contact";
 import homeBackgroundPic from './assets/daniele-salutari-restaurant-home.png';
 import contactBackgroundPic from './assets/contact-us.png';
+import logoPic from './assets/okonomi-logo.png';
 
 function createHeader() {
   const header = document.createElement('header');
@@ -10,7 +11,7 @@ function createHeader() {
 
   const logo = document.createElement('img');
   logo.id = 'logo';
-  logo.src = '../assets/okonomi-logo.png';
+  logo.src = logoPic;
   logo.alt = 'LOGO';
 
   header.append(logo);
