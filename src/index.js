@@ -4,5 +4,7 @@ import './css/style.css';
 loadPage();
 
 // Tasks: 
-// Add more information in Contact Us page
-// Complete the CSS styling
+// Edit contact info div
+// Improve and edit menu page
+// Add hover effects in the elements
+// Create media queries
