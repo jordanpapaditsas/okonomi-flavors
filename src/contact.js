@@ -5,7 +5,7 @@ function createContactPage() {
 
   const contactUsTitle = document.createElement('h1');
   contactUsTitle.id = 'contact-us-title';
-  contactUsTitle.textContent = 'Contact Us';
+  contactUsTitle.textContent = 'Send us your message';
 
   const submitBtnContainer = document.createElement('div');
   submitBtnContainer.id = 'submit-btn-container';
@@ -18,9 +18,47 @@ function createContactPage() {
   submitBtn.addEventListener('click', submitForm);
 
   submitBtnContainer.append(submitBtn);
-  contactPageContainer.append(contactUsTitle ,createForm(), submitBtnContainer);
+  contactPageContainer.append(createContactInfo(), contactUsTitle, 
+                                createForm(), submitBtnContainer);
 
   return contactPageContainer;
+}
+
+function createContactInfo() {
+  const contactInfoContainer = document.createElement('div');
+  contactInfoContainer.id = 'contact-info-container';
+
+  const locationContainer = document.createElement('div');
+  locationContainer.id = 'location-container';
+  const locationIcon = document.createElement('i');
+  locationIcon.classList.add('fa-solid', 'fa-location-dot');
+  const location = document.createElement('span');
+  location.id = 'location';
+  location.textContent = 'xxxxx xxxxxxxx 10';
+  
+  const phoneNumberContainer = document.createElement('div');
+  phoneNumberContainer.id = 'phone-number-container';
+  const phoneNumberIcon = document.createElement('i');
+  phoneNumberIcon.classList.add('fa-solid', 'fa-phone');
+  const phoneNumber = document.createElement('span');
+  phoneNumber.id = 'phone-number';
+  phoneNumber.textContent = '+30 698xxxxxxxx';
+
+  const emailContainer = document.createElement('div');
+  emailContainer.id = 'email-container';
+  const emailIcon = document.createElement('i');
+  emailIcon.classList.add('fa-solid', 'fa-envelope');
+  const email = document.createElement('span');
+  email.id = 'email';
+  email.textContent = 'o_f_JP@gmail.com';
+  
+  locationContainer.append(locationIcon, location);
+  phoneNumberContainer.append(phoneNumberIcon, phoneNumber);
+  emailContainer.append(emailIcon, email);
+
+  contactInfoContainer.append(locationContainer, phoneNumberContainer, emailContainer);
+
+  return contactInfoContainer;
 }
 
 function createForm() {

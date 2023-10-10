@@ -42,7 +42,7 @@ body {
 #contact-btn {
   color: var(--text-color-white);
   background-color: var(--color-black);
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-right: 5rem;
   border: none;
 }
@@ -54,7 +54,7 @@ body {
 }
 
 #restaurant-type {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: normal;
 }
 
@@ -128,6 +128,17 @@ body {
 
 #contact-page-container {
   animation: fadeIn 1.5s;
+  display: grid;
+  grid-template-areas: 
+  "aside main"
+  "aside main"
+  "aside main";
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
 }
 
 #contact-us-title {
@@ -135,11 +146,34 @@ body {
   text-align: center;
   margin-bottom: 1rem;
   font-size: 3rem;
+  grid-area: main;
+}
+
+#contact-info-container {
+  display: grid;
+  grid-area: aside;
+  gap: 1rem;
+  background-color: rgb(121, 10, 10);
+  color: var(--text-color-white);
+  width: 15rem;
+  height: 10rem;
+  border-radius: 0.4rem;
+}
+
+#location-container, 
+#phone-number-container,
+#email-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 1rem;
 }
 
 #contact-form-container {
   color: var(--text-color-white);
   margin-top: 5rem;
+  grid-area: main;
 }
 
 #contact-form {
@@ -174,6 +208,8 @@ body {
 
 #submit-btn-container {
   text-align: center;
+  grid-area: main;
+  grid-row: 4/4;
 }
 
 #submit-btn {
@@ -219,7 +255,7 @@ body {
   color: var(--text-color-white);
 }
 
-i {
+.fa-brands {
   color: var(--text-color-white);
 }
 
