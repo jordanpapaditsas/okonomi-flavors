@@ -25,7 +25,7 @@ body {
 }
 
 #logo {
-  width: 16rem;
+  width: 15rem;
   transition: all 0.8s ease-in-out;
 }
 
@@ -43,7 +43,7 @@ body {
 #contact-btn {
   color: var(--text-color-white);
   background-color: var(--color-black);
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin-right: 5rem;
   border: none;
 }
