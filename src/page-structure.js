@@ -34,7 +34,7 @@ function createNav() {
 
   const contactNavBtn = document.createElement('button');
   contactNavBtn.id = 'contact-btn';
-  contactNavBtn.textContent = 'CONTACT US';
+  contactNavBtn.textContent = 'CONTACT';
 
   nav.append(homeNavBtn);
   nav.append(menuNavBtn);

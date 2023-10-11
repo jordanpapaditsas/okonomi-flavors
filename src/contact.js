@@ -34,7 +34,7 @@ function createContactInfo() {
   locationIcon.classList.add('fa-solid', 'fa-location-dot');
   const location = document.createElement('span');
   location.id = 'location';
-  location.textContent = 'xxxxx xxxxxxxx 10';
+  location.textContent = 'Kyoto, Yamaxxxx xxxx 60';
   
   const phoneNumberContainer = document.createElement('div');
   phoneNumberContainer.id = 'phone-number-container';
@@ -42,7 +42,7 @@ function createContactInfo() {
   phoneNumberIcon.classList.add('fa-solid', 'fa-phone');
   const phoneNumber = document.createElement('span');
   phoneNumber.id = 'phone-number';
-  phoneNumber.textContent = '+30 698xxxxxxxx';
+  phoneNumber.textContent = '+81 75 xxx xxxx';
 
   const emailContainer = document.createElement('div');
   emailContainer.id = 'email-container';
@@ -50,7 +50,7 @@ function createContactInfo() {
   emailIcon.classList.add('fa-solid', 'fa-envelope');
   const email = document.createElement('span');
   email.id = 'email';
-  email.textContent = 'o_f_JP@gmail.com';
+  email.textContent = 'o-f_JP@gmail.com';
   
   locationContainer.append(locationIcon, location);
   phoneNumberContainer.append(phoneNumberIcon, phoneNumber);
