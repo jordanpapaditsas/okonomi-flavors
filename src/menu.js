@@ -12,8 +12,10 @@ function createMenuPage() {
     createProduct(
       'Samurai Bacon',
       firstProductImage,
-      'Testing Description Lorem Ipsum',
-      '5.70$'
+      `Introducing our Samurai Bacon Okonomiyaki where savory meets sensational! <br>
+      Delight in a harmonious blend of crispy, 
+      smoky bacon and the classic Japanese pancake, cooked to perfection.`,
+      'Price: 5.70$'
     )
   );
 
@@ -21,8 +23,10 @@ function createMenuPage() {
     createProduct(
       'Fuji sensation',
       secondProductImage,
-      'Testing Description Lorem Ipsum',
-      '7.50$'
+      `Behold the Fuji Sensation Okonomiyaki, a culinary masterpiece that ascends 
+      to new heights of taste and delight! <br>
+      This explicit sensation boasts a foundation of tender cabbage and savory pork belly, creating a delectable contrast of textures and flavors.`,
+      'Price: 7.50$'
     )
   );
 
@@ -30,8 +34,9 @@ function createMenuPage() {
     createProduct(
       'Ninja way',
       thirdProductImage,
-      'Testing Description Lorem Ipsum',
-      '6.90$'
+      `Prepare to embark on a culinary adventure like no other with our Ninja Way Okonomiyaki! <br>
+      This dish is crafted with crisp shredded carrots and delicate vegetables, providing a delightful harmony of textures and tastes.`,
+      'Price: 6.90$'
     )
   );
 
@@ -39,8 +44,10 @@ function createMenuPage() {
     createProduct(
       'Shrimp eruption',
       fourthProductImage,
-      'Testing Description Lorem Ipsum',
-      '9.60$'
+      `Prepare for a flavor eruption like no other with our Shrimp Eruption Okonomiyaki! <br>
+       This extraordinary dish takes the classic Japanese pancake to new heights by featuring a generous eruption of succulent shrimp, 
+       creating a delicious symphony of tastes and textures.`,
+      'Price: 9.60$'
     )
   );
 
@@ -62,7 +69,7 @@ function createProduct(productTitle, productImagePath, description, price) {
 
   const productDescription = document.createElement('p');
   productDescription.id = 'product-description';
-  productDescription.textContent = description;
+  productDescription.innerHTML = description;
 
   const productPrice = document.createElement('p');
   productPrice.id = 'product-price';

@@ -26,6 +26,7 @@ body {
 
 #logo {
   width: 16rem;
+  transition: all 0.8s ease-in-out;
 }
 
 #header {
@@ -97,7 +98,7 @@ body {
   flex-direction: column;
   text-align: center;
   gap: 5rem;
-  background: linear-gradient(rgba(8, 8, 8, 0.2), rgb(12, 1, 1, 0.8));
+  background: linear-gradient(rgba(8, 8, 8, 0.2), rgba(117, 109, 109, 0.8));
   animation: fadeIn 1.5s;
 }
 
@@ -114,10 +115,12 @@ body {
 
 #product-description {
   font-size: 1.3rem;
+  
 }
 
 #product-price {
   font-size: 1.4rem;
+  font-weight: bold;
 }
 
 #contact-page-container {
@@ -193,7 +196,7 @@ body {
 
 #contact-form textarea {
   height: 10rem;
-  resize: none;
+  resize: none;     /* disables the resizing message box manually */ 
   letter-spacing: 1px;
 }
 
@@ -219,20 +222,21 @@ body {
   color: var(--text-color-white);
   border: none;
   margin-top: 2rem;
+  transition: all 0.3s ease-in-out;
 }
 
 #confirmation-message {
   color: var(--text-color-white);
   text-align: center;
   margin-top: 2rem;
-  font-size: 2rem;
+  font-size: 1.3rem;
   animation: fadeIn 0.8s;
 }
 
 #error-name,
 #error-email,
 #error-textarea {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: red;
 }
  
@@ -241,7 +245,6 @@ body {
   background-color: var(--color-black);
   color: var(--text-color-white);
   margin-top: auto;
-  
 }
 
 #footer-div {
@@ -259,6 +262,29 @@ body {
 }
 
 /* Hover Effects */
+#logo:hover {
+  transform: rotate(360deg);
+  transition: all 0.8s ease-in-out;
+}
+
+#home-btn:hover,
+#menu-btn:hover,
+#contact-btn:hover {
+  background-color: var(--text-color-white);
+  color: var(--color-black);
+  transform: scale(1.2); 
+  transition: all 0.2s ease-in-out;
+}
+
+.fa-brands:hover {
+  transform: scale(1.4);
+}
+
+#submit-btn:hover {
+  color: #6e0808;
+  background-color: var(--text-color-white);
+  transition: all 0.3s ease-in-out;
+}
 
 @keyframes fadeIn {
   0% {

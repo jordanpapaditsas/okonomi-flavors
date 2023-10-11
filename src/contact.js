@@ -18,8 +18,8 @@ function createContactPage() {
   submitBtn.addEventListener('click', submitForm);
 
   submitBtnContainer.append(submitBtn);
-  contactPageContainer.append(createContactInfo(), contactUsTitle, 
-                                createForm(), submitBtnContainer);
+  contactPageContainer.append(contactUsTitle, 
+                                createForm(), submitBtnContainer,createContactInfo());
 
   return contactPageContainer;
 }
@@ -224,6 +224,12 @@ function displayLocalStorageData() {
 
 export function loadContactPage() {
   const main = document.querySelector('#main');
+  if (errorMessages.errorValidationForName || errorMessages.errorValidationForEmail || 
+       errorMessages.errorValidationForTextArea) {
+    errorMessages.errorValidationForName.textContent = '';
+    errorMessages.errorValidationForEmail.textContent = '';
+    errorMessages.errorValidationForTextArea.textContent = '';
+  } 
 
   main.append(createContactPage());
 }
