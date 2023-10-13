@@ -18,7 +18,7 @@ Okonomi Flavors is a dynamic Japanese restaurant website built using HTML, CSS, 
 - Responsive Design: The website is designed to be responsive on various screen sizes and devices.
 - Webpack Integration: Webpack is used for module bundling, optimizing assets, and keep organized the code structure.
 
-## How to install
+## How To Install
 1.Clone the repository:
 ```md
  git clone https://github.com/jordanpapaditsas/okonomi-flavors.git
