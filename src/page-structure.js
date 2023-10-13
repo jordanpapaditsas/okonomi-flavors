@@ -36,9 +36,21 @@ function createNav() {
   contactNavBtn.id = 'contact-btn';
   contactNavBtn.textContent = 'CONTACT';
 
+  // Hamburger menu 
+  const hamburger = document.createElement('div');
+  hamburger.id = 'hamburger-container';
+  const firstBar = document.createElement('span');
+  firstBar.classList.add('hamburger-bar');
+  const secondBar = document.createElement('span');
+  secondBar.classList.add('hamburger-bar');
+  const thirdBar = document.createElement('span');
+  thirdBar.classList.add('hamburger-bar');
+
   nav.append(homeNavBtn);
   nav.append(menuNavBtn);
   nav.append(contactNavBtn);
+  hamburger.append(firstBar, secondBar, thirdBar);
+  nav.append(hamburger);
 
   return nav;
 }
@@ -78,9 +90,7 @@ function createFooter() {
   return footer;
 }
 
-/**
- *  Function for switching between navbar tabs
- */
+  // Function for switching between navbar tabs
 function browseNavTabs() {
   const buttons = document.querySelectorAll('button');
   const homeBackgroundImage = homeBackgroundPic;
@@ -105,6 +115,16 @@ function browseNavTabs() {
   });
 }
 
+function displayHamburgerMenu() {
+  const hamburgerMenu = document.querySelector('#hamburger-container');
+  const navBar = document.querySelector('#nav');
+
+  hamburgerMenu.addEventListener('click', () => {
+    hamburgerMenu.classList.toggle('active');
+    navBar.classList.toggle('active');
+  });
+}
+
 function cleanMain() {
   const main = document.querySelector('#main');
   main.textContent = '';
@@ -120,6 +140,7 @@ export function loadPage() {
   content.append(createFooter());
   loadHomePage();
   browseNavTabs();
+  displayHamburgerMenu();
 
   return content;
 }

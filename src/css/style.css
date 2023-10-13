@@ -23,7 +23,7 @@ body {
   flex-direction: column;
   flex: 1;
 }
-
+/* Header */
 #logo {
   width: 15rem;
   transition: all 0.8s ease-in-out;
@@ -48,6 +48,23 @@ body {
   border: none;
 }
 
+/* Hamburger menu */
+#hamburger-container {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger-bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--text-color-white);
+}
+
+/* Main */
 #restaurant-name {
   color: var(--text-color-white);
   text-align: center;
@@ -127,10 +144,13 @@ body {
   animation: fadeIn 1.5s;
   display: grid;
   grid-template-areas: 
-  "aside main main"
-  "aside main main";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto 1fr;
+  "contact-info contact-form"
+  "contact-info contact-form";
+  grid-template-columns: 3fr 5fr 1fr;
+  grid-template-rows: 1fr 4fr 1fr;
+  gap: 4rem;
+  padding: 0 2rem;
+  justify-items: center;
 }
 
 #contact-us-title {
@@ -138,51 +158,41 @@ body {
   text-align: center;
   margin-bottom: 1rem;
   font-size: 3rem;
-  grid-area: main;
-  grid-column: 2;
+  grid-area: contact-form;
   grid-row: 1;
 }
 
 #contact-info-container {
   display: grid;
-  grid-area: aside;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
   background-color: rgb(0, 0, 0, 0.7);
   color: var(--text-color-white);
   width: 15rem;
   height: 16rem;
   border-radius: 0.4rem;
+  grid-area: contact-info;
   grid-row: 2;
-  grid-column: 1;
-  position: relative;
-  top: 20%;
-  left: 35%;
 }
 
 #location-container, 
 #phone-number-container,
 #email-container {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
   gap: 1rem;
   margin-left: 1rem;
 }
 
 #contact-form-container {
   color: var(--text-color-white);
-  margin-top: 5rem;
-  grid-area: main;
+  grid-area: contact-form;
   grid-row: 2;
-  grid-column: 2;
 }
 
 #contact-form {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -191,7 +201,7 @@ body {
   height: 3rem;
   font-size: 1rem;
   text-indent: 2rem;
-  border-radius: 1rem;
+  border-radius: 0.7rem;
 }
 
 #contact-form textarea {
@@ -200,17 +210,10 @@ body {
   letter-spacing: 1px;
 }
 
-#contact-form input:focus, #contact-form textarea:focus {
-  outline: none;
-  box-shadow: 1px 2px 2px 2px #6e0808;
-  border-radius: 0.5rem;
-}
-
 #submit-btn-container {
   text-align: center;
-  grid-area: main;
-  grid-row: 3/3;
-  grid-column: 2/3;
+  grid-area: contact-form;
+  grid-row: 3;
 }
 
 #submit-btn {
@@ -228,19 +231,22 @@ body {
 
 #confirmation-message {
   color: var(--text-color-white);
+  font-weight: bold;
   text-align: center;
-  margin-top: 2rem;
-  font-size: 1.3rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
   animation: fadeIn 0.8s;
 }
 
 #error-name,
 #error-email,
 #error-textarea {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: red;
+  font-weight: bold;
 }
- 
+
+ /* Footer */
 #footer {
   border: 1px solid var(--color-black);
   background-color: var(--color-black);
@@ -262,7 +268,7 @@ body {
   color: var(--text-color-white);
 }
 
-/* Hover Effects */
+/* Effects */
 #logo:hover {
   transform: rotate(360deg);
   transition: all 0.8s ease-in-out;
@@ -282,9 +288,15 @@ body {
 }
 
 #submit-btn:hover {
-  color: #6e0808;
+  color: var(--color-black);
   background-color: var(--text-color-white);
   transition: all 0.3s ease-in-out;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+  outline: none;
+  box-shadow: 1px 2px 2px 2px #0a0a0a;
+  border-radius: 0.5rem;
 }
 
 @keyframes fadeIn {
@@ -294,5 +306,149 @@ body {
 
   100% {
     opacity: 1;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 660px) {
+  #logo {
+    width: 12rem;
+  }
+
+  #nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    position: fixed;
+    left: -100%;
+    width: 100%;    
+    transition: 0.3s;
+    gap: 1rem;
+    background-color: rgb(0, 0, 0, 0.8);
+  }
+
+  #home-btn,
+  #menu-btn,
+  #contact-btn {
+    background-color: transparent;
+    font-size: 0.8rem;
+  }
+
+  #nav.active {
+    left: 0;
+  }
+
+  #hamburger-container {
+    display: block;
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  #hamburger-container.active .hamburger-bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  #hamburger-container.active .hamburger-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #hamburger-container.active .hamburger-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  #restaurant-name {
+    font-size: 1.5rem;
+  }
+
+  #restaurant-type {
+    font-size: 0.8rem;
+  }
+
+  #home-paragraph {
+    font-size: 1rem;
+    margin-top: 1rem;
+    max-width: 50%;
+  }
+
+  #work-schedule-div {
+    width: 40%;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    height: 10rem;
+  }
+
+  #hours-h2 {
+    font-size: 1.3rem;
+  }
+
+  #footer {
+    font-size: 0.7rem;
+  }
+
+  #product-img {
+    width: 8rem;
+  }
+
+  #product-title {
+    font-size: 1.2rem;
+  }
+
+  #product-description {
+    font-size: 0.9rem;
+    text-align: center;
+    width: 30rem;
+  }
+
+  #product-price {
+    font-size: 1.2rem;
+  }
+
+  #contact-us-title {
+    font-size: 1.5rem;
+    grid-column: 2;
+    margin-top: 1rem;
+  }
+
+  #contact-info-container {
+    font-size: 0.8rem;
+    width: 12rem;
+    height: 10rem;
+    position: static;
+  }
+
+  #contact-form-container {
+    grid-column: 2;
+  }
+  
+  #contact-form input, textarea {
+    width: 10rem;
+    height: 3rem;
+    font-size: 0.8rem;
+    text-indent: 1rem;
+  }
+
+  #submit-btn-container {
+    grid-column: 2;
+    margin-top: -2rem;
+  }
+
+  #submit-btn {
+    font-size: 1rem;
+    width: 8rem;
+    height: 2.5rem;
+  }
+
+  #confirmation-message {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  #error-name,
+  #error-email,
+  #error-textarea {
+    font-size: 1rem;
   }
 }
