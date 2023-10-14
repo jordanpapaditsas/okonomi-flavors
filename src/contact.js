@@ -148,7 +148,7 @@ function validateForm() {
   if (!nameInput || nameInput.length < 2) {
     errorMessages.errorValidationForName.innerHTML = 'Your Name is too short, please give a valid name!';
     isFormInputValid = false;
-  } else if (!/^[a-zA-z]+$/.test(nameInput) ) {
+  } else if (!/^[a-zA-z\s]+$/.test(nameInput) ) {
     errorMessages.errorValidationForName.innerHTML = 'Please give a valid name!';
   } else {
     // Clear the error message if the input is valid
