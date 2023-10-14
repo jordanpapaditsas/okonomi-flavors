@@ -23,6 +23,7 @@ body {
   flex-direction: column;
   flex: 1;
 }
+
 /* Header */
 #logo {
   width: 15rem;
@@ -268,7 +269,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-/* Effects */
+/* Animations - Effects */
 #logo:hover {
   transform: rotate(360deg);
   transition: all 0.8s ease-in-out;
