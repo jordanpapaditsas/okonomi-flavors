@@ -1,7 +1,7 @@
 # Okonomi-Flavors
 
 ## Description
-Okonomi Flavors is a dynamic Japanese restaurant website built using HTML, CSS, and JavaScript. It is developed with the Webpack module bundler to create an interactive user experience. The website features a home page, a menu page, a contact us form with validation, and local storage to store form submissions as JSON objects.
+Okonomi Flavors is a dynamic Japanese restaurant web app, built using HTML, CSS, and JavaScript. It is developed with the Webpack module bundler to create an interactive user experience. The website features a home page, a menu page, a contact us form with validation, and local storage to store form submissions as JSON objects.
 ( Currently under Development )
 
 ## Live Preview
