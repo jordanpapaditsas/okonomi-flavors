@@ -241,6 +241,7 @@ body {
   cursor: pointer;
 }
 
+/* Form submit messages */
 #confirmation-message {
   color: var(--text-color-white);
   font-weight: bold;
