@@ -90,7 +90,7 @@ function createFooter() {
   return footer;
 }
 
-  // Function for switching between navbar tabs
+  // Function for switching navbar pages
 function browseNavTabs() {
   const buttons = document.querySelectorAll('button');
   const homeBackgroundImage = homeBackgroundPic;
