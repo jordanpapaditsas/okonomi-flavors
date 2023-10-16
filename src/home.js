@@ -34,24 +34,33 @@
   const hoursMonday = document.createElement('p');
   hoursMonday.classList.add('hours');
   hoursMonday.textContent = 'Monday: 10:00 - 21:00';
+
   const hoursTuesday = document.createElement('p');
   hoursTuesday.classList.add('hours');
   hoursTuesday.textContent = 'Tuesday: 10:00 - 21:00';
+
   const hoursWednesday = document.createElement('p');
   hoursWednesday.classList.add('hours');
   hoursWednesday.textContent = 'Wednesday: 10:00 - 21:00';
+
   const hoursThursday = document.createElement('p');
   hoursThursday.classList.add('hours');
   hoursThursday.textContent = 'Thursday: 10:00 - 21:00';
+
   const hoursFriday = document.createElement('p');
   hoursFriday.classList.add('hours');
   hoursFriday.textContent = 'Friday: 10:00 - 21:00';
+
   const hoursSaturday = document.createElement('p');
   hoursSaturday.classList.add('hours');
   hoursSaturday.textContent = 'Saturday: 10:00 - 18:00';
 
+  const hoursSunday = document.createElement('p');
+  hoursSunday.classList.add('hours');
+  hoursSunday.textContent = 'Sunday: Closed';
+
   workScheduleDiv.append(hoursTitle, hoursMonday, hoursTuesday, hoursWednesday,  
-                         hoursThursday, hoursFriday, hoursSaturday);
+                         hoursThursday, hoursFriday, hoursSaturday, hoursSunday);
   homePageDiv.append(restaurantName, homeParagraph, workScheduleDiv);
   
   return homePageDiv;
