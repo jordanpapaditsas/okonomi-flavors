@@ -1,11 +1,11 @@
 :root {
   --text-color-white: #fafafa;
   --color-black: #000;
-  --font-size-small: 0.8rem;
-  --font-size-medium: 1.3rem;
-  --font-size-large: 1.5rem;
-  --font-size-extra-large: 2.5rem;
-  --font-size-3rem: 3rem;
+  --font-size-small: 0.7rem;
+  --font-size-medium: 1.1rem;
+  --font-size-large: 1.3rem;
+  --font-size-extra-large: 2.3rem;
+  --font-size-3rem: 2.6rem;
 }
 
 * {
@@ -31,7 +31,7 @@ body {
 
 /* Header */
 #logo {
-  width: 17rem;
+  width: 15rem;
   transition: all 0.8s ease-in-out;
 }
 
