@@ -101,11 +101,11 @@ body {
 
 #work-schedule-div {
   border: 2px solid var(--text-color-white);
+  font-size: var(--font-size-medium);
   width: 20%;
   height: 14rem;
   text-align: center;
   margin-top: 7rem;
-  font-size: var(--font-size-medium);
 }
 
 #hours-h2 {
