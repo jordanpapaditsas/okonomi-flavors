@@ -9,14 +9,19 @@ Okonomi Flavors is a dynamic Japanese restaurant web app, built using HTML, CSS,
 ## Screenshots Preview
 ### **Large Screens:**  
 
- Home page: ![image](https://github.com/jordanpapaditsas/okonomi-flavors/assets/114758586/4ee74c3f-8846-4fe8-997a-5370981d61b6)  
- Menu page: ![image](https://github.com/jordanpapaditsas/okonomi-flavors/assets/114758586/4796a452-55f8-4e8d-8e91-5946f5a5415d)
- Contact page: ![image](https://github.com/jordanpapaditsas/okonomi-flavors/assets/114758586/e5287b0e-ba0b-4e3a-aecf-66b3ea341e41)
+ Home page: ![image](https://github.com/jordanpapaditsas/okonomi-flavors/assets/114758586/8ea3f36e-e3a1-42ed-ae41-e97e4b3286e1)
+ Menu page: ![image](https://github.com/jordanpapaditsas/okonomi-flavors/assets/114758586/e0c84434-f868-448b-a442-2aa8a63743e1)
+ Contact page: ![image](https://github.com/jordanpapaditsas/okonomi-flavors/assets/114758586/7e046e83-e3f6-4110-a43c-eb51c78f851b)
+
 
 ### **Small Screens:**  
-![image](https://github.com/jordanpapaditsas/okonomi-flavors/assets/114758586/662fd778-01d2-46dc-95e0-341b1d432cd6)
-![image](https://github.com/jordanpapaditsas/okonomi-flavors/assets/114758586/f44775be-986b-4416-8972-c1b129f3ddad)
-![image](https://github.com/jordanpapaditsas/okonomi-flavors/assets/114758586/9e52e4e1-3c95-4ca6-8db5-d230808ad796)
+![image](https://github.com/jordanpapaditsas/okonomi-flavors/assets/114758586/3a844f8f-0a4c-45ee-b5cb-d890160fcb46)
+![image](https://github.com/jordanpapaditsas/okonomi-flavors/assets/114758586/d9a58678-dd52-41d8-9468-b222c6f9c6df)
+![image](https://github.com/jordanpapaditsas/okonomi-flavors/assets/114758586/e0e68fbc-139b-4a67-afc3-be2104d8d00a)
+![image](https://github.com/jordanpapaditsas/okonomi-flavors/assets/114758586/25b76783-1bd6-43f9-b7ad-a3bc9bd7b237)
+
+
+
 
 
 ## Features
