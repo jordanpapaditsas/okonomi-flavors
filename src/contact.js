@@ -146,7 +146,7 @@ function validateForm() {
   let isFormInputValid = true;
 
   if (!nameInput || nameInput.length < 2) {
-    errorMessages.errorValidationForName.innerHTML = 'Your Name is too short, please give a valid name!';
+    errorMessages.errorValidationForName.innerHTML = 'Your name is too short!';
     isFormInputValid = false;
   } else if (!/^[a-zA-z\s]+$/.test(nameInput) ) {
     errorMessages.errorValidationForName.innerHTML = 'Please give a valid name!';
@@ -163,7 +163,7 @@ function validateForm() {
   }
 
   if (!messageTextArea|| messageTextArea.length <= 6) {
-    errorMessages.errorValidationForTextArea.innerHTML = 'Your Message is too short!';
+    errorMessages.errorValidationForTextArea.innerHTML = 'Your message is too short!';
     isFormInputValid = false;
   } else {
     errorMessages.errorValidationForTextArea.innerHTML = '';
