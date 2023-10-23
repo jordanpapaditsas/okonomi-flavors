@@ -18,7 +18,9 @@ Okonomi Flavors is a dynamic Japanese restaurant web app, built using HTML, CSS,
 ![image](https://github.com/jordanpapaditsas/okonomi-flavors/assets/114758586/3a844f8f-0a4c-45ee-b5cb-d890160fcb46)
 ![image](https://github.com/jordanpapaditsas/okonomi-flavors/assets/114758586/d9a58678-dd52-41d8-9468-b222c6f9c6df)
 ![image](https://github.com/jordanpapaditsas/okonomi-flavors/assets/114758586/e0e68fbc-139b-4a67-afc3-be2104d8d00a)
-![image](https://github.com/jordanpapaditsas/okonomi-flavors/assets/114758586/25b76783-1bd6-43f9-b7ad-a3bc9bd7b237)
+![image](https://github.com/jordanpapaditsas/okonomi-flavors/assets/114758586/c321b97a-d5e2-4f58-9041-c70c40ad93df)
+
+
 
 
 
